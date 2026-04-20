@@ -1,0 +1,20 @@
+-- Install configuration: ""
+-- Execute custom install script
+-- Up-to-date symlink: /home/shihab/MARS PROJECT/mars_ws/install/mars_drone_description/share/mars_drone_description/urdf/drone.urdf.xacro
+-- Symlinking: /home/shihab/MARS PROJECT/mars_ws/install/mars_drone_description/share/mars_drone_description/launch/__pycache__/display.launch.cpython-310.pyc
+-- Up-to-date symlink: /home/shihab/MARS PROJECT/mars_ws/install/mars_drone_description/share/mars_drone_description/launch/display.launch.py
+-- Up-to-date symlink: /home/shihab/MARS PROJECT/mars_ws/install/mars_drone_description/share/ament_index/resource_index/package_run_dependencies/mars_drone_description
+-- Up-to-date symlink: /home/shihab/MARS PROJECT/mars_ws/install/mars_drone_description/share/ament_index/resource_index/parent_prefix_path/mars_drone_description
+-- Up-to-date symlink: /home/shihab/MARS PROJECT/mars_ws/install/mars_drone_description/share/mars_drone_description/environment/ament_prefix_path.sh
+-- Up-to-date symlink: /home/shihab/MARS PROJECT/mars_ws/install/mars_drone_description/share/mars_drone_description/environment/ament_prefix_path.dsv
+-- Up-to-date symlink: /home/shihab/MARS PROJECT/mars_ws/install/mars_drone_description/share/mars_drone_description/environment/path.sh
+-- Up-to-date symlink: /home/shihab/MARS PROJECT/mars_ws/install/mars_drone_description/share/mars_drone_description/environment/path.dsv
+-- Up-to-date symlink: /home/shihab/MARS PROJECT/mars_ws/install/mars_drone_description/share/mars_drone_description/local_setup.bash
+-- Up-to-date symlink: /home/shihab/MARS PROJECT/mars_ws/install/mars_drone_description/share/mars_drone_description/local_setup.sh
+-- Up-to-date symlink: /home/shihab/MARS PROJECT/mars_ws/install/mars_drone_description/share/mars_drone_description/local_setup.zsh
+-- Up-to-date symlink: /home/shihab/MARS PROJECT/mars_ws/install/mars_drone_description/share/mars_drone_description/local_setup.dsv
+-- Symlinking: /home/shihab/MARS PROJECT/mars_ws/install/mars_drone_description/share/mars_drone_description/package.dsv
+-- Up-to-date symlink: /home/shihab/MARS PROJECT/mars_ws/install/mars_drone_description/share/ament_index/resource_index/packages/mars_drone_description
+-- Up-to-date symlink: /home/shihab/MARS PROJECT/mars_ws/install/mars_drone_description/share/mars_drone_description/cmake/mars_drone_descriptionConfig.cmake
+-- Up-to-date symlink: /home/shihab/MARS PROJECT/mars_ws/install/mars_drone_description/share/mars_drone_description/cmake/mars_drone_descriptionConfig-version.cmake
+-- Up-to-date symlink: /home/shihab/MARS PROJECT/mars_ws/install/mars_drone_description/share/mars_drone_description/package.xml

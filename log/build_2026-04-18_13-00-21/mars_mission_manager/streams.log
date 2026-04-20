@@ -1,0 +1,24 @@
+[0.683s] Invoking command in '/home/shihab/MARS PROJECT/mars_ws/build/mars_mission_manager': PYTHONPATH=/home/shihab/MARS PROJECT/mars_ws/build/mars_mission_manager/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/shihab/MARS PROJECT/mars_ws/install/mars_mission_manager/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/shihab/MARS PROJECT/mars_ws/build/mars_mission_manager/build --no-deps symlink_data
+[0.872s] running develop
+[0.999s] running egg_info
+[0.999s] creating mars_mission_manager.egg-info
+[0.999s] writing mars_mission_manager.egg-info/PKG-INFO
+[0.999s] writing dependency_links to mars_mission_manager.egg-info/dependency_links.txt
+[0.999s] writing entry points to mars_mission_manager.egg-info/entry_points.txt
+[0.999s] writing requirements to mars_mission_manager.egg-info/requires.txt
+[0.999s] writing top-level names to mars_mission_manager.egg-info/top_level.txt
+[0.999s] writing manifest file 'mars_mission_manager.egg-info/SOURCES.txt'
+[1.001s] reading manifest file 'mars_mission_manager.egg-info/SOURCES.txt'
+[1.001s] writing manifest file 'mars_mission_manager.egg-info/SOURCES.txt'
+[1.002s] running build_ext
+[1.002s] Creating /home/shihab/MARS PROJECT/mars_ws/install/mars_mission_manager/lib/python3.10/site-packages/mars-mission-manager.egg-link (link to .)
+[1.002s] Installing mission_manager_node script to /home/shihab/MARS PROJECT/mars_ws/install/mars_mission_manager/lib/mars_mission_manager
+[1.002s] 
+[1.003s] Installed /home/shihab/MARS PROJECT/mars_ws/build/mars_mission_manager
+[1.003s] running symlink_data
+[1.003s] creating /home/shihab/MARS PROJECT/mars_ws/install/mars_mission_manager/share/ament_index
+[1.003s] creating /home/shihab/MARS PROJECT/mars_ws/install/mars_mission_manager/share/ament_index/resource_index
+[1.003s] creating /home/shihab/MARS PROJECT/mars_ws/install/mars_mission_manager/share/ament_index/resource_index/packages
+[1.003s] symbolically linking /home/shihab/MARS PROJECT/mars_ws/build/mars_mission_manager/resource/mars_mission_manager -> /home/shihab/MARS PROJECT/mars_ws/install/mars_mission_manager/share/ament_index/resource_index/packages
+[1.003s] symbolically linking /home/shihab/MARS PROJECT/mars_ws/build/mars_mission_manager/package.xml -> /home/shihab/MARS PROJECT/mars_ws/install/mars_mission_manager/share/mars_mission_manager
+[1.022s] Invoked command in '/home/shihab/MARS PROJECT/mars_ws/build/mars_mission_manager' returned '0': PYTHONPATH=/home/shihab/MARS PROJECT/mars_ws/build/mars_mission_manager/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/shihab/MARS PROJECT/mars_ws/install/mars_mission_manager/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/shihab/MARS PROJECT/mars_ws/build/mars_mission_manager/build --no-deps symlink_data

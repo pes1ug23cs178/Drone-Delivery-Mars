@@ -1,0 +1,13 @@
+package.xml
+setup.cfg
+setup.py
+mars_gui/__init__.py
+mars_gui/delivery_gui.py
+mars_gui.egg-info/PKG-INFO
+mars_gui.egg-info/SOURCES.txt
+mars_gui.egg-info/dependency_links.txt
+mars_gui.egg-info/entry_points.txt
+mars_gui.egg-info/requires.txt
+mars_gui.egg-info/top_level.txt
+mars_gui.egg-info/zip-safe
+resource/mars_gui

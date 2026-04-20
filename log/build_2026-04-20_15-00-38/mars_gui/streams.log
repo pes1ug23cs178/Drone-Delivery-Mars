@@ -1,0 +1,17 @@
+[0.775s] Invoking command in '/home/shihab/MARS PROJECT/mars_ws/build/mars_gui': PYTHONPATH=/home/shihab/MARS PROJECT/mars_ws/build/mars_gui/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/shihab/MARS PROJECT/mars_ws/install/mars_gui/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/shihab/MARS PROJECT/mars_ws/build/mars_gui/build --no-deps symlink_data
+[0.979s] running develop
+[1.132s] running egg_info
+[1.132s] writing mars_gui.egg-info/PKG-INFO
+[1.132s] writing dependency_links to mars_gui.egg-info/dependency_links.txt
+[1.132s] writing entry points to mars_gui.egg-info/entry_points.txt
+[1.132s] writing requirements to mars_gui.egg-info/requires.txt
+[1.132s] writing top-level names to mars_gui.egg-info/top_level.txt
+[1.133s] reading manifest file 'mars_gui.egg-info/SOURCES.txt'
+[1.133s] writing manifest file 'mars_gui.egg-info/SOURCES.txt'
+[1.134s] running build_ext
+[1.134s] Creating /home/shihab/MARS PROJECT/mars_ws/install/mars_gui/lib/python3.10/site-packages/mars-gui.egg-link (link to .)
+[1.135s] Installing delivery_gui script to /home/shihab/MARS PROJECT/mars_ws/install/mars_gui/lib/mars_gui
+[1.135s] 
+[1.135s] Installed /home/shihab/MARS PROJECT/mars_ws/build/mars_gui
+[1.135s] running symlink_data
+[1.173s] Invoked command in '/home/shihab/MARS PROJECT/mars_ws/build/mars_gui' returned '0': PYTHONPATH=/home/shihab/MARS PROJECT/mars_ws/build/mars_gui/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/shihab/MARS PROJECT/mars_ws/install/mars_gui/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/shihab/MARS PROJECT/mars_ws/build/mars_gui/build --no-deps symlink_data

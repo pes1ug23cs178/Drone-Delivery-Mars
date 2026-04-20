@@ -1,0 +1,10 @@
+[0.636s] Invoking command in '/home/shihab/MARS PROJECT/mars_ws/build/mars_mission_manager': PYTHONPATH=/home/shihab/MARS PROJECT/mars_ws/build/mars_mission_manager/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/shihab/MARS PROJECT/mars_ws/install/mars_mission_manager/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/shihab/MARS PROJECT/mars_ws/build/mars_mission_manager/build
+[0.780s] /home/shihab/.local/lib/python3.10/site-packages/setuptools/_distutils/dist.py:287: UserWarning: Unknown distribution option: 'tests_require'
+[0.780s]   warnings.warn(msg)
+[0.821s] usage: setup.py [global_opts] cmd1 [cmd1_opts] [cmd2 [cmd2_opts] ...]
+[0.821s]    or: setup.py --help [cmd1 cmd2 ...]
+[0.821s]    or: setup.py --help-commands
+[0.822s]    or: setup.py cmd --help
+[0.822s] 
+[0.822s] error: option --uninstall not recognized
+[0.840s] Invoked command in '/home/shihab/MARS PROJECT/mars_ws/build/mars_mission_manager' returned '1': PYTHONPATH=/home/shihab/MARS PROJECT/mars_ws/build/mars_mission_manager/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/shihab/MARS PROJECT/mars_ws/install/mars_mission_manager/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/shihab/MARS PROJECT/mars_ws/build/mars_mission_manager/build

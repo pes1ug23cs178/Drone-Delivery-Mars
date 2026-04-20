@@ -1,0 +1,23 @@
+[0.033s] Invoking command in '/home/shihab/MARS PROJECT/mars_ws/build/mars_drone_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/shihab/MARS PROJECT/mars_ws/install/mars_mission_manager:/home/shihab/MARS PROJECT/mars_ws/install/mars_gui:/home/shihab/turtlebot3_ws/install/turtlebot3_teleop:/home/shihab/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble /usr/bin/cmake --build /home/shihab/MARS PROJECT/mars_ws/build/mars_drone_description -- -j12 -l12
+[0.422s] Invoked command in '/home/shihab/MARS PROJECT/mars_ws/build/mars_drone_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/shihab/MARS PROJECT/mars_ws/install/mars_mission_manager:/home/shihab/MARS PROJECT/mars_ws/install/mars_gui:/home/shihab/turtlebot3_ws/install/turtlebot3_teleop:/home/shihab/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble /usr/bin/cmake --build /home/shihab/MARS PROJECT/mars_ws/build/mars_drone_description -- -j12 -l12
+[0.433s] Invoking command in '/home/shihab/MARS PROJECT/mars_ws/build/mars_drone_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/shihab/MARS PROJECT/mars_ws/install/mars_mission_manager:/home/shihab/MARS PROJECT/mars_ws/install/mars_gui:/home/shihab/turtlebot3_ws/install/turtlebot3_teleop:/home/shihab/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble /usr/bin/cmake --install /home/shihab/MARS PROJECT/mars_ws/build/mars_drone_description
+[0.443s] -- Install configuration: ""
+[0.443s] -- Execute custom install script
+[0.443s] -- Up-to-date symlink: /home/shihab/MARS PROJECT/mars_ws/install/mars_drone_description/share/mars_drone_description/urdf/drone.urdf.xacro
+[0.443s] -- Up-to-date symlink: /home/shihab/MARS PROJECT/mars_ws/install/mars_drone_description/share/mars_drone_description/launch/display.launch.py
+[0.443s] -- Up-to-date symlink: /home/shihab/MARS PROJECT/mars_ws/install/mars_drone_description/share/ament_index/resource_index/package_run_dependencies/mars_drone_description
+[0.444s] -- Up-to-date symlink: /home/shihab/MARS PROJECT/mars_ws/install/mars_drone_description/share/ament_index/resource_index/parent_prefix_path/mars_drone_description
+[0.444s] -- Up-to-date symlink: /home/shihab/MARS PROJECT/mars_ws/install/mars_drone_description/share/mars_drone_description/environment/ament_prefix_path.sh
+[0.444s] -- Up-to-date symlink: /home/shihab/MARS PROJECT/mars_ws/install/mars_drone_description/share/mars_drone_description/environment/ament_prefix_path.dsv
+[0.444s] -- Up-to-date symlink: /home/shihab/MARS PROJECT/mars_ws/install/mars_drone_description/share/mars_drone_description/environment/path.sh
+[0.444s] -- Up-to-date symlink: /home/shihab/MARS PROJECT/mars_ws/install/mars_drone_description/share/mars_drone_description/environment/path.dsv
+[0.444s] -- Up-to-date symlink: /home/shihab/MARS PROJECT/mars_ws/install/mars_drone_description/share/mars_drone_description/local_setup.bash
+[0.444s] -- Up-to-date symlink: /home/shihab/MARS PROJECT/mars_ws/install/mars_drone_description/share/mars_drone_description/local_setup.sh
+[0.444s] -- Up-to-date symlink: /home/shihab/MARS PROJECT/mars_ws/install/mars_drone_description/share/mars_drone_description/local_setup.zsh
+[0.444s] -- Up-to-date symlink: /home/shihab/MARS PROJECT/mars_ws/install/mars_drone_description/share/mars_drone_description/local_setup.dsv
+[0.444s] -- Symlinking: /home/shihab/MARS PROJECT/mars_ws/install/mars_drone_description/share/mars_drone_description/package.dsv
+[0.452s] -- Up-to-date symlink: /home/shihab/MARS PROJECT/mars_ws/install/mars_drone_description/share/ament_index/resource_index/packages/mars_drone_description
+[0.452s] -- Up-to-date symlink: /home/shihab/MARS PROJECT/mars_ws/install/mars_drone_description/share/mars_drone_description/cmake/mars_drone_descriptionConfig.cmake
+[0.452s] -- Up-to-date symlink: /home/shihab/MARS PROJECT/mars_ws/install/mars_drone_description/share/mars_drone_description/cmake/mars_drone_descriptionConfig-version.cmake
+[0.452s] -- Up-to-date symlink: /home/shihab/MARS PROJECT/mars_ws/install/mars_drone_description/share/mars_drone_description/package.xml
+[0.455s] Invoked command in '/home/shihab/MARS PROJECT/mars_ws/build/mars_drone_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/shihab/MARS PROJECT/mars_ws/install/mars_mission_manager:/home/shihab/MARS PROJECT/mars_ws/install/mars_gui:/home/shihab/turtlebot3_ws/install/turtlebot3_teleop:/home/shihab/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble /usr/bin/cmake --install /home/shihab/MARS PROJECT/mars_ws/build/mars_drone_description

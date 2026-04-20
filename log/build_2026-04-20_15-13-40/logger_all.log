@@ -1,0 +1,370 @@
+[0.071s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install']
+[0.071s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=12, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x73b79885f9a0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x73b79885f430>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x73b79885f430>>, mixin_verb=('build',))
+[0.204s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.204s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.204s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.204s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.204s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.204s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.204s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/shihab/MARS PROJECT/mars_ws'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(src/mars_bringup) by extensions ['ignore', 'ignore_ament_install']
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(src/mars_bringup) by extension 'ignore'
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(src/mars_bringup) by extension 'ignore_ament_install'
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(src/mars_bringup) by extensions ['colcon_pkg']
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(src/mars_bringup) by extension 'colcon_pkg'
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(src/mars_bringup) by extensions ['colcon_meta']
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(src/mars_bringup) by extension 'colcon_meta'
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(src/mars_bringup) by extensions ['ros']
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(src/mars_bringup) by extension 'ros'
+[0.233s] DEBUG:colcon.colcon_core.package_identification:Package 'src/mars_bringup' with type 'ros.ament_cmake' and name 'mars_bringup'
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(src/mars_drone_description) by extensions ['ignore', 'ignore_ament_install']
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(src/mars_drone_description) by extension 'ignore'
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(src/mars_drone_description) by extension 'ignore_ament_install'
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(src/mars_drone_description) by extensions ['colcon_pkg']
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(src/mars_drone_description) by extension 'colcon_pkg'
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(src/mars_drone_description) by extensions ['colcon_meta']
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(src/mars_drone_description) by extension 'colcon_meta'
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(src/mars_drone_description) by extensions ['ros']
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(src/mars_drone_description) by extension 'ros'
+[0.233s] DEBUG:colcon.colcon_core.package_identification:Package 'src/mars_drone_description' with type 'ros.ament_cmake' and name 'mars_drone_description'
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(src/mars_gui) by extensions ['ignore', 'ignore_ament_install']
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(src/mars_gui) by extension 'ignore'
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(src/mars_gui) by extension 'ignore_ament_install'
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(src/mars_gui) by extensions ['colcon_pkg']
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(src/mars_gui) by extension 'colcon_pkg'
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(src/mars_gui) by extensions ['colcon_meta']
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(src/mars_gui) by extension 'colcon_meta'
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(src/mars_gui) by extensions ['ros']
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(src/mars_gui) by extension 'ros'
+[0.234s] DEBUG:colcon.colcon_core.package_identification:Package 'src/mars_gui' with type 'ros.ament_python' and name 'mars_gui'
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(src/mars_mission_manager) by extensions ['ignore', 'ignore_ament_install']
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(src/mars_mission_manager) by extension 'ignore'
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(src/mars_mission_manager) by extension 'ignore_ament_install'
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(src/mars_mission_manager) by extensions ['colcon_pkg']
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(src/mars_mission_manager) by extension 'colcon_pkg'
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(src/mars_mission_manager) by extensions ['colcon_meta']
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(src/mars_mission_manager) by extension 'colcon_meta'
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(src/mars_mission_manager) by extensions ['ros']
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(src/mars_mission_manager) by extension 'ros'
+[0.235s] DEBUG:colcon.colcon_core.package_identification:Package 'src/mars_mission_manager' with type 'ros.ament_python' and name 'mars_mission_manager'
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(src/mars_world) by extensions ['ignore', 'ignore_ament_install']
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(src/mars_world) by extension 'ignore'
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(src/mars_world) by extension 'ignore_ament_install'
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(src/mars_world) by extensions ['colcon_pkg']
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(src/mars_world) by extension 'colcon_pkg'
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(src/mars_world) by extensions ['colcon_meta']
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(src/mars_world) by extension 'colcon_meta'
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(src/mars_world) by extensions ['ros']
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(src/mars_world) by extension 'ros'
+[0.235s] DEBUG:colcon.colcon_core.package_identification:Package 'src/mars_world' with type 'ros.ament_cmake' and name 'mars_world'
+[0.235s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.235s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.235s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.235s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.235s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.249s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.249s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.251s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 477 installed packages in /opt/ros/humble
+[0.253s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.293s] Level 5:colcon.colcon_core.verb:set package 'mars_drone_description' build argument 'cmake_args' from command line to 'None'
+[0.293s] Level 5:colcon.colcon_core.verb:set package 'mars_drone_description' build argument 'cmake_target' from command line to 'None'
+[0.293s] Level 5:colcon.colcon_core.verb:set package 'mars_drone_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.293s] Level 5:colcon.colcon_core.verb:set package 'mars_drone_description' build argument 'cmake_clean_cache' from command line to 'False'
+[0.293s] Level 5:colcon.colcon_core.verb:set package 'mars_drone_description' build argument 'cmake_clean_first' from command line to 'False'
+[0.293s] Level 5:colcon.colcon_core.verb:set package 'mars_drone_description' build argument 'cmake_force_configure' from command line to 'False'
+[0.293s] Level 5:colcon.colcon_core.verb:set package 'mars_drone_description' build argument 'ament_cmake_args' from command line to 'None'
+[0.293s] Level 5:colcon.colcon_core.verb:set package 'mars_drone_description' build argument 'catkin_cmake_args' from command line to 'None'
+[0.293s] Level 5:colcon.colcon_core.verb:set package 'mars_drone_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.293s] DEBUG:colcon.colcon_core.verb:Building package 'mars_drone_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/shihab/MARS PROJECT/mars_ws/build/mars_drone_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/shihab/MARS PROJECT/mars_ws/install/mars_drone_description', 'merge_install': False, 'path': '/home/shihab/MARS PROJECT/mars_ws/src/mars_drone_description', 'symlink_install': True, 'test_result_base': None}
+[0.293s] Level 5:colcon.colcon_core.verb:set package 'mars_gui' build argument 'cmake_args' from command line to 'None'
+[0.293s] Level 5:colcon.colcon_core.verb:set package 'mars_gui' build argument 'cmake_target' from command line to 'None'
+[0.293s] Level 5:colcon.colcon_core.verb:set package 'mars_gui' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.293s] Level 5:colcon.colcon_core.verb:set package 'mars_gui' build argument 'cmake_clean_cache' from command line to 'False'
+[0.293s] Level 5:colcon.colcon_core.verb:set package 'mars_gui' build argument 'cmake_clean_first' from command line to 'False'
+[0.293s] Level 5:colcon.colcon_core.verb:set package 'mars_gui' build argument 'cmake_force_configure' from command line to 'False'
+[0.293s] Level 5:colcon.colcon_core.verb:set package 'mars_gui' build argument 'ament_cmake_args' from command line to 'None'
+[0.293s] Level 5:colcon.colcon_core.verb:set package 'mars_gui' build argument 'catkin_cmake_args' from command line to 'None'
+[0.293s] Level 5:colcon.colcon_core.verb:set package 'mars_gui' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.293s] DEBUG:colcon.colcon_core.verb:Building package 'mars_gui' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/shihab/MARS PROJECT/mars_ws/build/mars_gui', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/shihab/MARS PROJECT/mars_ws/install/mars_gui', 'merge_install': False, 'path': '/home/shihab/MARS PROJECT/mars_ws/src/mars_gui', 'symlink_install': True, 'test_result_base': None}
+[0.293s] Level 5:colcon.colcon_core.verb:set package 'mars_mission_manager' build argument 'cmake_args' from command line to 'None'
+[0.293s] Level 5:colcon.colcon_core.verb:set package 'mars_mission_manager' build argument 'cmake_target' from command line to 'None'
+[0.293s] Level 5:colcon.colcon_core.verb:set package 'mars_mission_manager' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.293s] Level 5:colcon.colcon_core.verb:set package 'mars_mission_manager' build argument 'cmake_clean_cache' from command line to 'False'
+[0.293s] Level 5:colcon.colcon_core.verb:set package 'mars_mission_manager' build argument 'cmake_clean_first' from command line to 'False'
+[0.293s] Level 5:colcon.colcon_core.verb:set package 'mars_mission_manager' build argument 'cmake_force_configure' from command line to 'False'
+[0.293s] Level 5:colcon.colcon_core.verb:set package 'mars_mission_manager' build argument 'ament_cmake_args' from command line to 'None'
+[0.293s] Level 5:colcon.colcon_core.verb:set package 'mars_mission_manager' build argument 'catkin_cmake_args' from command line to 'None'
+[0.294s] Level 5:colcon.colcon_core.verb:set package 'mars_mission_manager' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.294s] DEBUG:colcon.colcon_core.verb:Building package 'mars_mission_manager' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/shihab/MARS PROJECT/mars_ws/build/mars_mission_manager', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/shihab/MARS PROJECT/mars_ws/install/mars_mission_manager', 'merge_install': False, 'path': '/home/shihab/MARS PROJECT/mars_ws/src/mars_mission_manager', 'symlink_install': True, 'test_result_base': None}
+[0.294s] Level 5:colcon.colcon_core.verb:set package 'mars_world' build argument 'cmake_args' from command line to 'None'
+[0.294s] Level 5:colcon.colcon_core.verb:set package 'mars_world' build argument 'cmake_target' from command line to 'None'
+[0.294s] Level 5:colcon.colcon_core.verb:set package 'mars_world' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.294s] Level 5:colcon.colcon_core.verb:set package 'mars_world' build argument 'cmake_clean_cache' from command line to 'False'
+[0.294s] Level 5:colcon.colcon_core.verb:set package 'mars_world' build argument 'cmake_clean_first' from command line to 'False'
+[0.294s] Level 5:colcon.colcon_core.verb:set package 'mars_world' build argument 'cmake_force_configure' from command line to 'False'
+[0.294s] Level 5:colcon.colcon_core.verb:set package 'mars_world' build argument 'ament_cmake_args' from command line to 'None'
+[0.294s] Level 5:colcon.colcon_core.verb:set package 'mars_world' build argument 'catkin_cmake_args' from command line to 'None'
+[0.294s] Level 5:colcon.colcon_core.verb:set package 'mars_world' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.294s] DEBUG:colcon.colcon_core.verb:Building package 'mars_world' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/shihab/MARS PROJECT/mars_ws/build/mars_world', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/shihab/MARS PROJECT/mars_ws/install/mars_world', 'merge_install': False, 'path': '/home/shihab/MARS PROJECT/mars_ws/src/mars_world', 'symlink_install': True, 'test_result_base': None}
+[0.294s] Level 5:colcon.colcon_core.verb:set package 'mars_bringup' build argument 'cmake_args' from command line to 'None'
+[0.294s] Level 5:colcon.colcon_core.verb:set package 'mars_bringup' build argument 'cmake_target' from command line to 'None'
+[0.294s] Level 5:colcon.colcon_core.verb:set package 'mars_bringup' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.294s] Level 5:colcon.colcon_core.verb:set package 'mars_bringup' build argument 'cmake_clean_cache' from command line to 'False'
+[0.294s] Level 5:colcon.colcon_core.verb:set package 'mars_bringup' build argument 'cmake_clean_first' from command line to 'False'
+[0.294s] Level 5:colcon.colcon_core.verb:set package 'mars_bringup' build argument 'cmake_force_configure' from command line to 'False'
+[0.294s] Level 5:colcon.colcon_core.verb:set package 'mars_bringup' build argument 'ament_cmake_args' from command line to 'None'
+[0.294s] Level 5:colcon.colcon_core.verb:set package 'mars_bringup' build argument 'catkin_cmake_args' from command line to 'None'
+[0.294s] Level 5:colcon.colcon_core.verb:set package 'mars_bringup' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.294s] DEBUG:colcon.colcon_core.verb:Building package 'mars_bringup' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/shihab/MARS PROJECT/mars_ws/build/mars_bringup', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/shihab/MARS PROJECT/mars_ws/install/mars_bringup', 'merge_install': False, 'path': '/home/shihab/MARS PROJECT/mars_ws/src/mars_bringup', 'symlink_install': True, 'test_result_base': None}
+[0.294s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.295s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.295s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/shihab/MARS PROJECT/mars_ws/src/mars_drone_description' with build type 'ament_cmake'
+[0.295s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/shihab/MARS PROJECT/mars_ws/src/mars_drone_description'
+[0.297s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.297s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.297s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.299s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/shihab/MARS PROJECT/mars_ws/src/mars_mission_manager' with build type 'ament_python'
+[0.299s] Level 1:colcon.colcon_core.shell:create_environment_hook('mars_mission_manager', 'ament_prefix_path')
+[0.299s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/shihab/MARS PROJECT/mars_ws/install/mars_mission_manager/share/mars_mission_manager/hook/ament_prefix_path.ps1'
+[0.300s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/shihab/MARS PROJECT/mars_ws/install/mars_mission_manager/share/mars_mission_manager/hook/ament_prefix_path.dsv'
+[0.300s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/shihab/MARS PROJECT/mars_ws/install/mars_mission_manager/share/mars_mission_manager/hook/ament_prefix_path.sh'
+[0.300s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.300s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.302s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/shihab/MARS PROJECT/mars_ws/src/mars_world' with build type 'ament_cmake'
+[0.303s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/shihab/MARS PROJECT/mars_ws/src/mars_world'
+[0.303s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.303s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.305s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/shihab/MARS PROJECT/mars_ws/src/mars_gui' with build type 'ament_python'
+[0.305s] Level 1:colcon.colcon_core.shell:create_environment_hook('mars_gui', 'ament_prefix_path')
+[0.305s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/shihab/MARS PROJECT/mars_ws/install/mars_gui/share/mars_gui/hook/ament_prefix_path.ps1'
+[0.306s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/shihab/MARS PROJECT/mars_ws/install/mars_gui/share/mars_gui/hook/ament_prefix_path.dsv'
+[0.306s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/shihab/MARS PROJECT/mars_ws/install/mars_gui/share/mars_gui/hook/ament_prefix_path.sh'
+[0.306s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.306s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.311s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/shihab/MARS PROJECT/mars_ws/build/mars_drone_description': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/shihab/MARS PROJECT/mars_ws/build/mars_drone_description -- -j12 -l12
+[0.533s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/shihab/MARS PROJECT/mars_ws/src/mars_mission_manager'
+[0.533s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.533s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.538s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/shihab/MARS PROJECT/mars_ws/build/mars_world': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/shihab/MARS PROJECT/mars_ws/build/mars_world -- -j12 -l12
+[0.753s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/shihab/MARS PROJECT/mars_ws/src/mars_gui'
+[0.753s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.753s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.756s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/shihab/MARS PROJECT/mars_ws/build/mars_drone_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/shihab/MARS PROJECT/mars_ws/build/mars_drone_description -- -j12 -l12
+[0.765s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/shihab/MARS PROJECT/mars_ws/build/mars_drone_description': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/shihab/MARS PROJECT/mars_ws/build/mars_drone_description
+[0.770s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/shihab/MARS PROJECT/mars_ws/build/mars_world' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/shihab/MARS PROJECT/mars_ws/build/mars_world -- -j12 -l12
+[0.771s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/shihab/MARS PROJECT/mars_ws/build/mars_world': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/shihab/MARS PROJECT/mars_ws/build/mars_world
+[0.783s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(mars_drone_description)
+[0.784s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/shihab/MARS PROJECT/mars_ws/build/mars_drone_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/shihab/MARS PROJECT/mars_ws/build/mars_drone_description
+[0.786s] Level 1:colcon.colcon_core.environment:checking '/home/shihab/MARS PROJECT/mars_ws/install/mars_drone_description' for CMake module files
+[0.786s] Level 1:colcon.colcon_core.environment:checking '/home/shihab/MARS PROJECT/mars_ws/install/mars_drone_description' for CMake config files
+[0.786s] Level 1:colcon.colcon_core.shell:create_environment_hook('mars_drone_description', 'cmake_prefix_path')
+[0.786s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/shihab/MARS PROJECT/mars_ws/install/mars_drone_description/share/mars_drone_description/hook/cmake_prefix_path.ps1'
+[0.787s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/shihab/MARS PROJECT/mars_ws/install/mars_drone_description/share/mars_drone_description/hook/cmake_prefix_path.dsv'
+[0.787s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/shihab/MARS PROJECT/mars_ws/install/mars_drone_description/share/mars_drone_description/hook/cmake_prefix_path.sh'
+[0.787s] Level 1:colcon.colcon_core.environment:checking '/home/shihab/MARS PROJECT/mars_ws/install/mars_drone_description/bin'
+[0.787s] Level 1:colcon.colcon_core.environment:checking '/home/shihab/MARS PROJECT/mars_ws/install/mars_drone_description/lib/pkgconfig/mars_drone_description.pc'
+[0.788s] Level 1:colcon.colcon_core.environment:checking '/home/shihab/MARS PROJECT/mars_ws/install/mars_drone_description/lib/python3.10/site-packages'
+[0.788s] Level 1:colcon.colcon_core.environment:checking '/home/shihab/MARS PROJECT/mars_ws/install/mars_drone_description/bin'
+[0.789s] INFO:colcon.colcon_core.shell:Creating package script '/home/shihab/MARS PROJECT/mars_ws/install/mars_drone_description/share/mars_drone_description/package.ps1'
+[0.790s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/shihab/MARS PROJECT/mars_ws/install/mars_drone_description/share/mars_drone_description/package.dsv'
+[0.791s] INFO:colcon.colcon_core.shell:Creating package script '/home/shihab/MARS PROJECT/mars_ws/install/mars_drone_description/share/mars_drone_description/package.sh'
+[0.792s] INFO:colcon.colcon_core.shell:Creating package script '/home/shihab/MARS PROJECT/mars_ws/install/mars_drone_description/share/mars_drone_description/package.bash'
+[0.793s] INFO:colcon.colcon_core.shell:Creating package script '/home/shihab/MARS PROJECT/mars_ws/install/mars_drone_description/share/mars_drone_description/package.zsh'
+[0.794s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/shihab/MARS PROJECT/mars_ws/install/mars_drone_description/share/colcon-core/packages/mars_drone_description)
+[0.794s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(mars_drone_description)
+[0.794s] Level 1:colcon.colcon_core.environment:checking '/home/shihab/MARS PROJECT/mars_ws/install/mars_drone_description' for CMake module files
+[0.795s] Level 1:colcon.colcon_core.environment:checking '/home/shihab/MARS PROJECT/mars_ws/install/mars_drone_description' for CMake config files
+[0.795s] Level 1:colcon.colcon_core.shell:create_environment_hook('mars_drone_description', 'cmake_prefix_path')
+[0.795s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/shihab/MARS PROJECT/mars_ws/install/mars_drone_description/share/mars_drone_description/hook/cmake_prefix_path.ps1'
+[0.795s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/shihab/MARS PROJECT/mars_ws/install/mars_drone_description/share/mars_drone_description/hook/cmake_prefix_path.dsv'
+[0.796s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/shihab/MARS PROJECT/mars_ws/install/mars_drone_description/share/mars_drone_description/hook/cmake_prefix_path.sh'
+[0.796s] Level 1:colcon.colcon_core.environment:checking '/home/shihab/MARS PROJECT/mars_ws/install/mars_drone_description/bin'
+[0.796s] Level 1:colcon.colcon_core.environment:checking '/home/shihab/MARS PROJECT/mars_ws/install/mars_drone_description/lib/pkgconfig/mars_drone_description.pc'
+[0.797s] Level 1:colcon.colcon_core.environment:checking '/home/shihab/MARS PROJECT/mars_ws/install/mars_drone_description/lib/python3.10/site-packages'
+[0.797s] Level 1:colcon.colcon_core.environment:checking '/home/shihab/MARS PROJECT/mars_ws/install/mars_drone_description/bin'
+[0.797s] INFO:colcon.colcon_core.shell:Creating package script '/home/shihab/MARS PROJECT/mars_ws/install/mars_drone_description/share/mars_drone_description/package.ps1'
+[0.798s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/shihab/MARS PROJECT/mars_ws/install/mars_drone_description/share/mars_drone_description/package.dsv'
+[0.798s] INFO:colcon.colcon_core.shell:Creating package script '/home/shihab/MARS PROJECT/mars_ws/install/mars_drone_description/share/mars_drone_description/package.sh'
+[0.798s] INFO:colcon.colcon_core.shell:Creating package script '/home/shihab/MARS PROJECT/mars_ws/install/mars_drone_description/share/mars_drone_description/package.bash'
+[0.798s] INFO:colcon.colcon_core.shell:Creating package script '/home/shihab/MARS PROJECT/mars_ws/install/mars_drone_description/share/mars_drone_description/package.zsh'
+[0.799s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/shihab/MARS PROJECT/mars_ws/install/mars_drone_description/share/colcon-core/packages/mars_drone_description)
+[0.800s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(mars_world)
+[0.801s] Level 1:colcon.colcon_core.environment:checking '/home/shihab/MARS PROJECT/mars_ws/install/mars_world' for CMake module files
+[0.801s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/shihab/MARS PROJECT/mars_ws/build/mars_world' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/shihab/MARS PROJECT/mars_ws/build/mars_world
+[0.802s] Level 1:colcon.colcon_core.environment:checking '/home/shihab/MARS PROJECT/mars_ws/install/mars_world' for CMake config files
+[0.803s] Level 1:colcon.colcon_core.shell:create_environment_hook('mars_world', 'cmake_prefix_path')
+[0.803s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/shihab/MARS PROJECT/mars_ws/install/mars_world/share/mars_world/hook/cmake_prefix_path.ps1'
+[0.804s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/shihab/MARS PROJECT/mars_ws/install/mars_world/share/mars_world/hook/cmake_prefix_path.dsv'
+[0.804s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/shihab/MARS PROJECT/mars_ws/install/mars_world/share/mars_world/hook/cmake_prefix_path.sh'
+[0.805s] Level 1:colcon.colcon_core.environment:checking '/home/shihab/MARS PROJECT/mars_ws/install/mars_world/bin'
+[0.805s] Level 1:colcon.colcon_core.environment:checking '/home/shihab/MARS PROJECT/mars_ws/install/mars_world/lib/pkgconfig/mars_world.pc'
+[0.805s] Level 1:colcon.colcon_core.environment:checking '/home/shihab/MARS PROJECT/mars_ws/install/mars_world/lib/python3.10/site-packages'
+[0.805s] Level 1:colcon.colcon_core.environment:checking '/home/shihab/MARS PROJECT/mars_ws/install/mars_world/bin'
+[0.806s] INFO:colcon.colcon_core.shell:Creating package script '/home/shihab/MARS PROJECT/mars_ws/install/mars_world/share/mars_world/package.ps1'
+[0.806s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/shihab/MARS PROJECT/mars_ws/install/mars_world/share/mars_world/package.dsv'
+[0.807s] INFO:colcon.colcon_core.shell:Creating package script '/home/shihab/MARS PROJECT/mars_ws/install/mars_world/share/mars_world/package.sh'
+[0.807s] INFO:colcon.colcon_core.shell:Creating package script '/home/shihab/MARS PROJECT/mars_ws/install/mars_world/share/mars_world/package.bash'
+[0.807s] INFO:colcon.colcon_core.shell:Creating package script '/home/shihab/MARS PROJECT/mars_ws/install/mars_world/share/mars_world/package.zsh'
+[0.807s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/shihab/MARS PROJECT/mars_ws/install/mars_world/share/colcon-core/packages/mars_world)
+[0.808s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(mars_world)
+[0.808s] Level 1:colcon.colcon_core.environment:checking '/home/shihab/MARS PROJECT/mars_ws/install/mars_world' for CMake module files
+[0.809s] Level 1:colcon.colcon_core.environment:checking '/home/shihab/MARS PROJECT/mars_ws/install/mars_world' for CMake config files
+[0.809s] Level 1:colcon.colcon_core.shell:create_environment_hook('mars_world', 'cmake_prefix_path')
+[0.809s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/shihab/MARS PROJECT/mars_ws/install/mars_world/share/mars_world/hook/cmake_prefix_path.ps1'
+[0.810s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/shihab/MARS PROJECT/mars_ws/install/mars_world/share/mars_world/hook/cmake_prefix_path.dsv'
+[0.810s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/shihab/MARS PROJECT/mars_ws/install/mars_world/share/mars_world/hook/cmake_prefix_path.sh'
+[0.810s] Level 1:colcon.colcon_core.environment:checking '/home/shihab/MARS PROJECT/mars_ws/install/mars_world/bin'
+[0.810s] Level 1:colcon.colcon_core.environment:checking '/home/shihab/MARS PROJECT/mars_ws/install/mars_world/lib/pkgconfig/mars_world.pc'
+[0.811s] Level 1:colcon.colcon_core.environment:checking '/home/shihab/MARS PROJECT/mars_ws/install/mars_world/lib/python3.10/site-packages'
+[0.811s] Level 1:colcon.colcon_core.environment:checking '/home/shihab/MARS PROJECT/mars_ws/install/mars_world/bin'
+[0.811s] INFO:colcon.colcon_core.shell:Creating package script '/home/shihab/MARS PROJECT/mars_ws/install/mars_world/share/mars_world/package.ps1'
+[0.811s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/shihab/MARS PROJECT/mars_ws/install/mars_world/share/mars_world/package.dsv'
+[0.812s] INFO:colcon.colcon_core.shell:Creating package script '/home/shihab/MARS PROJECT/mars_ws/install/mars_world/share/mars_world/package.sh'
+[0.812s] INFO:colcon.colcon_core.shell:Creating package script '/home/shihab/MARS PROJECT/mars_ws/install/mars_world/share/mars_world/package.bash'
+[0.812s] INFO:colcon.colcon_core.shell:Creating package script '/home/shihab/MARS PROJECT/mars_ws/install/mars_world/share/mars_world/package.zsh'
+[0.813s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/shihab/MARS PROJECT/mars_ws/install/mars_world/share/colcon-core/packages/mars_world)
+[1.105s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/shihab/MARS PROJECT/mars_ws/build/mars_gui': PYTHONPATH=/home/shihab/MARS PROJECT/mars_ws/build/mars_gui/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/shihab/MARS PROJECT/mars_ws/install/mars_gui/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/shihab/MARS PROJECT/mars_ws/build/mars_gui/build --no-deps symlink_data
+[1.107s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/shihab/MARS PROJECT/mars_ws/build/mars_mission_manager': PYTHONPATH=/home/shihab/MARS PROJECT/mars_ws/build/mars_mission_manager/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/shihab/MARS PROJECT/mars_ws/install/mars_mission_manager/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/shihab/MARS PROJECT/mars_ws/build/mars_mission_manager/build --no-deps symlink_data
+[1.580s] Level 1:colcon.colcon_core.shell:create_environment_hook('mars_gui', 'pythonpath_develop')
+[1.580s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/shihab/MARS PROJECT/mars_ws/build/mars_gui/share/mars_gui/hook/pythonpath_develop.ps1'
+[1.581s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/shihab/MARS PROJECT/mars_ws/build/mars_gui' returned '0': PYTHONPATH=/home/shihab/MARS PROJECT/mars_ws/build/mars_gui/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/shihab/MARS PROJECT/mars_ws/install/mars_gui/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/shihab/MARS PROJECT/mars_ws/build/mars_gui/build --no-deps symlink_data
+[1.581s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/shihab/MARS PROJECT/mars_ws/build/mars_gui/share/mars_gui/hook/pythonpath_develop.dsv'
+[1.581s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/shihab/MARS PROJECT/mars_ws/build/mars_gui/share/mars_gui/hook/pythonpath_develop.sh'
+[1.582s] Level 1:colcon.colcon_core.environment:checking '/home/shihab/MARS PROJECT/mars_ws/install/mars_gui' for CMake module files
+[1.582s] Level 1:colcon.colcon_core.environment:checking '/home/shihab/MARS PROJECT/mars_ws/install/mars_gui' for CMake config files
+[1.582s] Level 1:colcon.colcon_core.environment:checking '/home/shihab/MARS PROJECT/mars_ws/install/mars_gui/lib'
+[1.582s] Level 1:colcon.colcon_core.environment:checking '/home/shihab/MARS PROJECT/mars_ws/install/mars_gui/bin'
+[1.582s] Level 1:colcon.colcon_core.environment:checking '/home/shihab/MARS PROJECT/mars_ws/install/mars_gui/lib/pkgconfig/mars_gui.pc'
+[1.583s] Level 1:colcon.colcon_core.environment:checking '/home/shihab/MARS PROJECT/mars_ws/install/mars_gui/lib/python3.10/site-packages'
+[1.583s] Level 1:colcon.colcon_core.shell:create_environment_hook('mars_gui', 'pythonpath')
+[1.583s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/shihab/MARS PROJECT/mars_ws/install/mars_gui/share/mars_gui/hook/pythonpath.ps1'
+[1.583s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/shihab/MARS PROJECT/mars_ws/install/mars_gui/share/mars_gui/hook/pythonpath.dsv'
+[1.583s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/shihab/MARS PROJECT/mars_ws/install/mars_gui/share/mars_gui/hook/pythonpath.sh'
+[1.584s] Level 1:colcon.colcon_core.environment:checking '/home/shihab/MARS PROJECT/mars_ws/install/mars_gui/bin'
+[1.584s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(mars_gui)
+[1.584s] INFO:colcon.colcon_core.shell:Creating package script '/home/shihab/MARS PROJECT/mars_ws/install/mars_gui/share/mars_gui/package.ps1'
+[1.584s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/shihab/MARS PROJECT/mars_ws/install/mars_gui/share/mars_gui/package.dsv'
+[1.584s] INFO:colcon.colcon_core.shell:Creating package script '/home/shihab/MARS PROJECT/mars_ws/install/mars_gui/share/mars_gui/package.sh'
+[1.585s] INFO:colcon.colcon_core.shell:Creating package script '/home/shihab/MARS PROJECT/mars_ws/install/mars_gui/share/mars_gui/package.bash'
+[1.585s] INFO:colcon.colcon_core.shell:Creating package script '/home/shihab/MARS PROJECT/mars_ws/install/mars_gui/share/mars_gui/package.zsh'
+[1.585s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/shihab/MARS PROJECT/mars_ws/install/mars_gui/share/colcon-core/packages/mars_gui)
+[1.585s] Level 1:colcon.colcon_core.shell:create_environment_hook('mars_mission_manager', 'pythonpath_develop')
+[1.585s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/shihab/MARS PROJECT/mars_ws/build/mars_mission_manager/share/mars_mission_manager/hook/pythonpath_develop.ps1'
+[1.586s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/shihab/MARS PROJECT/mars_ws/build/mars_mission_manager' returned '0': PYTHONPATH=/home/shihab/MARS PROJECT/mars_ws/build/mars_mission_manager/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/shihab/MARS PROJECT/mars_ws/install/mars_mission_manager/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/shihab/MARS PROJECT/mars_ws/build/mars_mission_manager/build --no-deps symlink_data
+[1.586s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/shihab/MARS PROJECT/mars_ws/build/mars_mission_manager/share/mars_mission_manager/hook/pythonpath_develop.dsv'
+[1.586s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/shihab/MARS PROJECT/mars_ws/build/mars_mission_manager/share/mars_mission_manager/hook/pythonpath_develop.sh'
+[1.586s] Level 1:colcon.colcon_core.environment:checking '/home/shihab/MARS PROJECT/mars_ws/install/mars_mission_manager' for CMake module files
+[1.587s] Level 1:colcon.colcon_core.environment:checking '/home/shihab/MARS PROJECT/mars_ws/install/mars_mission_manager' for CMake config files
+[1.587s] Level 1:colcon.colcon_core.environment:checking '/home/shihab/MARS PROJECT/mars_ws/install/mars_mission_manager/lib'
+[1.587s] Level 1:colcon.colcon_core.environment:checking '/home/shihab/MARS PROJECT/mars_ws/install/mars_mission_manager/bin'
+[1.587s] Level 1:colcon.colcon_core.environment:checking '/home/shihab/MARS PROJECT/mars_ws/install/mars_mission_manager/lib/pkgconfig/mars_mission_manager.pc'
+[1.587s] Level 1:colcon.colcon_core.environment:checking '/home/shihab/MARS PROJECT/mars_ws/install/mars_mission_manager/lib/python3.10/site-packages'
+[1.587s] Level 1:colcon.colcon_core.shell:create_environment_hook('mars_mission_manager', 'pythonpath')
+[1.587s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/shihab/MARS PROJECT/mars_ws/install/mars_mission_manager/share/mars_mission_manager/hook/pythonpath.ps1'
+[1.588s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/shihab/MARS PROJECT/mars_ws/install/mars_mission_manager/share/mars_mission_manager/hook/pythonpath.dsv'
+[1.588s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/shihab/MARS PROJECT/mars_ws/install/mars_mission_manager/share/mars_mission_manager/hook/pythonpath.sh'
+[1.588s] Level 1:colcon.colcon_core.environment:checking '/home/shihab/MARS PROJECT/mars_ws/install/mars_mission_manager/bin'
+[1.588s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(mars_mission_manager)
+[1.588s] INFO:colcon.colcon_core.shell:Creating package script '/home/shihab/MARS PROJECT/mars_ws/install/mars_mission_manager/share/mars_mission_manager/package.ps1'
+[1.589s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/shihab/MARS PROJECT/mars_ws/install/mars_mission_manager/share/mars_mission_manager/package.dsv'
+[1.589s] INFO:colcon.colcon_core.shell:Creating package script '/home/shihab/MARS PROJECT/mars_ws/install/mars_mission_manager/share/mars_mission_manager/package.sh'
+[1.589s] INFO:colcon.colcon_core.shell:Creating package script '/home/shihab/MARS PROJECT/mars_ws/install/mars_mission_manager/share/mars_mission_manager/package.bash'
+[1.589s] INFO:colcon.colcon_core.shell:Creating package script '/home/shihab/MARS PROJECT/mars_ws/install/mars_mission_manager/share/mars_mission_manager/package.zsh'
+[1.590s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/shihab/MARS PROJECT/mars_ws/install/mars_mission_manager/share/colcon-core/packages/mars_mission_manager)
+[1.590s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/shihab/MARS PROJECT/mars_ws/src/mars_bringup' with build type 'ament_cmake'
+[1.590s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/shihab/MARS PROJECT/mars_ws/src/mars_bringup'
+[1.590s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.590s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.598s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/shihab/MARS PROJECT/mars_ws/build/mars_bringup': AMENT_PREFIX_PATH=/home/shihab/MARS PROJECT/mars_ws/install/mars_world:/home/shihab/MARS PROJECT/mars_ws/install/mars_mission_manager:/home/shihab/MARS PROJECT/mars_ws/install/mars_drone_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/shihab/MARS PROJECT/mars_ws/install/mars_world:/home/shihab/MARS PROJECT/mars_ws/install/mars_drone_description:/opt/ros/humble PYTHONPATH=/home/shihab/MARS PROJECT/mars_ws/build/mars_mission_manager:/home/shihab/MARS PROJECT/mars_ws/install/mars_mission_manager/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/shihab/MARS PROJECT/mars_ws/build/mars_bringup -- -j12 -l12
+[1.636s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/shihab/MARS PROJECT/mars_ws/build/mars_bringup' returned '0': AMENT_PREFIX_PATH=/home/shihab/MARS PROJECT/mars_ws/install/mars_world:/home/shihab/MARS PROJECT/mars_ws/install/mars_mission_manager:/home/shihab/MARS PROJECT/mars_ws/install/mars_drone_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/shihab/MARS PROJECT/mars_ws/install/mars_world:/home/shihab/MARS PROJECT/mars_ws/install/mars_drone_description:/opt/ros/humble PYTHONPATH=/home/shihab/MARS PROJECT/mars_ws/build/mars_mission_manager:/home/shihab/MARS PROJECT/mars_ws/install/mars_mission_manager/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/shihab/MARS PROJECT/mars_ws/build/mars_bringup -- -j12 -l12
+[1.638s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/shihab/MARS PROJECT/mars_ws/build/mars_bringup': AMENT_PREFIX_PATH=/home/shihab/MARS PROJECT/mars_ws/install/mars_world:/home/shihab/MARS PROJECT/mars_ws/install/mars_mission_manager:/home/shihab/MARS PROJECT/mars_ws/install/mars_drone_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/shihab/MARS PROJECT/mars_ws/install/mars_world:/home/shihab/MARS PROJECT/mars_ws/install/mars_drone_description:/opt/ros/humble PYTHONPATH=/home/shihab/MARS PROJECT/mars_ws/build/mars_mission_manager:/home/shihab/MARS PROJECT/mars_ws/install/mars_mission_manager/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/shihab/MARS PROJECT/mars_ws/build/mars_bringup
+[1.662s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(mars_bringup)
+[1.662s] Level 1:colcon.colcon_core.environment:checking '/home/shihab/MARS PROJECT/mars_ws/install/mars_bringup' for CMake module files
+[1.663s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/shihab/MARS PROJECT/mars_ws/build/mars_bringup' returned '0': AMENT_PREFIX_PATH=/home/shihab/MARS PROJECT/mars_ws/install/mars_world:/home/shihab/MARS PROJECT/mars_ws/install/mars_mission_manager:/home/shihab/MARS PROJECT/mars_ws/install/mars_drone_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/shihab/MARS PROJECT/mars_ws/install/mars_world:/home/shihab/MARS PROJECT/mars_ws/install/mars_drone_description:/opt/ros/humble PYTHONPATH=/home/shihab/MARS PROJECT/mars_ws/build/mars_mission_manager:/home/shihab/MARS PROJECT/mars_ws/install/mars_mission_manager/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/shihab/MARS PROJECT/mars_ws/build/mars_bringup
+[1.663s] Level 1:colcon.colcon_core.environment:checking '/home/shihab/MARS PROJECT/mars_ws/install/mars_bringup' for CMake config files
+[1.663s] Level 1:colcon.colcon_core.shell:create_environment_hook('mars_bringup', 'cmake_prefix_path')
+[1.664s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/shihab/MARS PROJECT/mars_ws/install/mars_bringup/share/mars_bringup/hook/cmake_prefix_path.ps1'
+[1.664s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/shihab/MARS PROJECT/mars_ws/install/mars_bringup/share/mars_bringup/hook/cmake_prefix_path.dsv'
+[1.665s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/shihab/MARS PROJECT/mars_ws/install/mars_bringup/share/mars_bringup/hook/cmake_prefix_path.sh'
+[1.665s] Level 1:colcon.colcon_core.environment:checking '/home/shihab/MARS PROJECT/mars_ws/install/mars_bringup/bin'
+[1.665s] Level 1:colcon.colcon_core.environment:checking '/home/shihab/MARS PROJECT/mars_ws/install/mars_bringup/lib/pkgconfig/mars_bringup.pc'
+[1.665s] Level 1:colcon.colcon_core.environment:checking '/home/shihab/MARS PROJECT/mars_ws/install/mars_bringup/lib/python3.10/site-packages'
+[1.666s] Level 1:colcon.colcon_core.environment:checking '/home/shihab/MARS PROJECT/mars_ws/install/mars_bringup/bin'
+[1.666s] INFO:colcon.colcon_core.shell:Creating package script '/home/shihab/MARS PROJECT/mars_ws/install/mars_bringup/share/mars_bringup/package.ps1'
+[1.666s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/shihab/MARS PROJECT/mars_ws/install/mars_bringup/share/mars_bringup/package.dsv'
+[1.667s] INFO:colcon.colcon_core.shell:Creating package script '/home/shihab/MARS PROJECT/mars_ws/install/mars_bringup/share/mars_bringup/package.sh'
+[1.667s] INFO:colcon.colcon_core.shell:Creating package script '/home/shihab/MARS PROJECT/mars_ws/install/mars_bringup/share/mars_bringup/package.bash'
+[1.668s] INFO:colcon.colcon_core.shell:Creating package script '/home/shihab/MARS PROJECT/mars_ws/install/mars_bringup/share/mars_bringup/package.zsh'
+[1.668s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/shihab/MARS PROJECT/mars_ws/install/mars_bringup/share/colcon-core/packages/mars_bringup)
+[1.668s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(mars_bringup)
+[1.669s] Level 1:colcon.colcon_core.environment:checking '/home/shihab/MARS PROJECT/mars_ws/install/mars_bringup' for CMake module files
+[1.669s] Level 1:colcon.colcon_core.environment:checking '/home/shihab/MARS PROJECT/mars_ws/install/mars_bringup' for CMake config files
+[1.669s] Level 1:colcon.colcon_core.shell:create_environment_hook('mars_bringup', 'cmake_prefix_path')
+[1.669s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/shihab/MARS PROJECT/mars_ws/install/mars_bringup/share/mars_bringup/hook/cmake_prefix_path.ps1'
+[1.670s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/shihab/MARS PROJECT/mars_ws/install/mars_bringup/share/mars_bringup/hook/cmake_prefix_path.dsv'
+[1.670s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/shihab/MARS PROJECT/mars_ws/install/mars_bringup/share/mars_bringup/hook/cmake_prefix_path.sh'
+[1.670s] Level 1:colcon.colcon_core.environment:checking '/home/shihab/MARS PROJECT/mars_ws/install/mars_bringup/bin'
+[1.670s] Level 1:colcon.colcon_core.environment:checking '/home/shihab/MARS PROJECT/mars_ws/install/mars_bringup/lib/pkgconfig/mars_bringup.pc'
+[1.670s] Level 1:colcon.colcon_core.environment:checking '/home/shihab/MARS PROJECT/mars_ws/install/mars_bringup/lib/python3.10/site-packages'
+[1.670s] Level 1:colcon.colcon_core.environment:checking '/home/shihab/MARS PROJECT/mars_ws/install/mars_bringup/bin'
+[1.671s] INFO:colcon.colcon_core.shell:Creating package script '/home/shihab/MARS PROJECT/mars_ws/install/mars_bringup/share/mars_bringup/package.ps1'
+[1.671s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/shihab/MARS PROJECT/mars_ws/install/mars_bringup/share/mars_bringup/package.dsv'
+[1.671s] INFO:colcon.colcon_core.shell:Creating package script '/home/shihab/MARS PROJECT/mars_ws/install/mars_bringup/share/mars_bringup/package.sh'
+[1.671s] INFO:colcon.colcon_core.shell:Creating package script '/home/shihab/MARS PROJECT/mars_ws/install/mars_bringup/share/mars_bringup/package.bash'
+[1.672s] INFO:colcon.colcon_core.shell:Creating package script '/home/shihab/MARS PROJECT/mars_ws/install/mars_bringup/share/mars_bringup/package.zsh'
+[1.672s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/shihab/MARS PROJECT/mars_ws/install/mars_bringup/share/colcon-core/packages/mars_bringup)
+[1.672s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[1.672s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[1.672s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[1.672s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[1.676s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[1.676s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[1.676s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[1.684s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[1.684s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/shihab/MARS PROJECT/mars_ws/install/local_setup.ps1'
+[1.685s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/shihab/MARS PROJECT/mars_ws/install/_local_setup_util_ps1.py'
+[1.686s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/shihab/MARS PROJECT/mars_ws/install/setup.ps1'
+[1.687s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/shihab/MARS PROJECT/mars_ws/install/local_setup.sh'
+[1.687s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/shihab/MARS PROJECT/mars_ws/install/_local_setup_util_sh.py'
+[1.687s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/shihab/MARS PROJECT/mars_ws/install/setup.sh'
+[1.688s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/shihab/MARS PROJECT/mars_ws/install/local_setup.bash'
+[1.688s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/shihab/MARS PROJECT/mars_ws/install/setup.bash'
+[1.689s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/shihab/MARS PROJECT/mars_ws/install/local_setup.zsh'
+[1.689s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/shihab/MARS PROJECT/mars_ws/install/setup.zsh'

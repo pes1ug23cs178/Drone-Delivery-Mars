@@ -1,0 +1,3 @@
+[console_scripts]
+delivery_gui = mars_gui.delivery_gui:main
+

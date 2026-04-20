@@ -1,0 +1,6 @@
+Invoking command in '/home/shihab/MARS PROJECT/mars_ws/build/mars_world': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/shihab/MARS PROJECT/mars_ws/src/mars_world -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/shihab/MARS PROJECT/mars_ws/install/mars_world
+Invoked command in '/home/shihab/MARS PROJECT/mars_ws/build/mars_world' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/shihab/MARS PROJECT/mars_ws/src/mars_world -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/shihab/MARS PROJECT/mars_ws/install/mars_world
+Invoking command in '/home/shihab/MARS PROJECT/mars_ws/build/mars_world': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/shihab/MARS PROJECT/mars_ws/build/mars_world -- -j12 -l12
+Invoked command in '/home/shihab/MARS PROJECT/mars_ws/build/mars_world' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/shihab/MARS PROJECT/mars_ws/build/mars_world -- -j12 -l12
+Invoking command in '/home/shihab/MARS PROJECT/mars_ws/build/mars_world': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/shihab/MARS PROJECT/mars_ws/build/mars_world
+Invoked command in '/home/shihab/MARS PROJECT/mars_ws/build/mars_world' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/shihab/MARS PROJECT/mars_ws/build/mars_world

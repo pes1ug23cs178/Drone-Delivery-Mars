@@ -1,0 +1,1 @@
+/home/shihab/MARS PROJECT/mars_ws/build/mars_world/ament_cmake_environment_hooks/local_setup.bash

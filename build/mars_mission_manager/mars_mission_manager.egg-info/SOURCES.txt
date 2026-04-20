@@ -1,0 +1,13 @@
+package.xml
+setup.cfg
+setup.py
+mars_mission_manager/__init__.py
+mars_mission_manager/mission_manager_node.py
+mars_mission_manager.egg-info/PKG-INFO
+mars_mission_manager.egg-info/SOURCES.txt
+mars_mission_manager.egg-info/dependency_links.txt
+mars_mission_manager.egg-info/entry_points.txt
+mars_mission_manager.egg-info/requires.txt
+mars_mission_manager.egg-info/top_level.txt
+mars_mission_manager.egg-info/zip-safe
+resource/mars_mission_manager

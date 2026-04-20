@@ -1,0 +1,36 @@
+[0.230s] Invoking command in '/home/shihab/MARS PROJECT/mars_ws/build/mars_world': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/shihab/MARS PROJECT/mars_ws/build/mars_world -- -j12 -l12
+[0.430s] Invoked command in '/home/shihab/MARS PROJECT/mars_ws/build/mars_world' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/shihab/MARS PROJECT/mars_ws/build/mars_world -- -j12 -l12
+[0.432s] Invoking command in '/home/shihab/MARS PROJECT/mars_ws/build/mars_world': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/shihab/MARS PROJECT/mars_ws/build/mars_world
+[0.439s] -- Install configuration: ""
+[0.439s] -- Execute custom install script
+[0.439s] -- Up-to-date symlink: /home/shihab/MARS PROJECT/mars_ws/install/mars_world/share/mars_world/worlds/mars_delivery.world
+[0.440s] -- Up-to-date symlink: /home/shihab/MARS PROJECT/mars_ws/install/mars_world/share/mars_world/models/house1/model.config
+[0.440s] -- Up-to-date symlink: /home/shihab/MARS PROJECT/mars_ws/install/mars_world/share/mars_world/models/house1/model.sdf
+[0.440s] -- Up-to-date symlink: /home/shihab/MARS PROJECT/mars_ws/install/mars_world/share/mars_world/models/house2/model.config
+[0.441s] -- Up-to-date symlink: /home/shihab/MARS PROJECT/mars_ws/install/mars_world/share/mars_world/models/house2/model.sdf
+[0.441s] -- Up-to-date symlink: /home/shihab/MARS PROJECT/mars_ws/install/mars_world/share/mars_world/models/house3/model.config
+[0.441s] -- Up-to-date symlink: /home/shihab/MARS PROJECT/mars_ws/install/mars_world/share/mars_world/models/house3/model.sdf
+[0.441s] -- Up-to-date symlink: /home/shihab/MARS PROJECT/mars_ws/install/mars_world/share/mars_world/models/house4/model.config
+[0.442s] -- Up-to-date symlink: /home/shihab/MARS PROJECT/mars_ws/install/mars_world/share/mars_world/models/house4/model.sdf
+[0.442s] -- Up-to-date symlink: /home/shihab/MARS PROJECT/mars_ws/install/mars_world/share/mars_world/models/house5/model.config
+[0.442s] -- Up-to-date symlink: /home/shihab/MARS PROJECT/mars_ws/install/mars_world/share/mars_world/models/house5/model.sdf
+[0.442s] -- Up-to-date symlink: /home/shihab/MARS PROJECT/mars_ws/install/mars_world/share/mars_world/models/house6/model.config
+[0.442s] -- Up-to-date symlink: /home/shihab/MARS PROJECT/mars_ws/install/mars_world/share/mars_world/models/house6/model.sdf
+[0.442s] -- Up-to-date symlink: /home/shihab/MARS PROJECT/mars_ws/install/mars_world/share/mars_world/models/warehouse/model.config
+[0.443s] -- Up-to-date symlink: /home/shihab/MARS PROJECT/mars_ws/install/mars_world/share/mars_world/models/warehouse/model.sdf
+[0.443s] -- Up-to-date symlink: /home/shihab/MARS PROJECT/mars_ws/install/mars_world/share/ament_index/resource_index/package_run_dependencies/mars_world
+[0.443s] -- Up-to-date symlink: /home/shihab/MARS PROJECT/mars_ws/install/mars_world/share/ament_index/resource_index/parent_prefix_path/mars_world
+[0.443s] -- Up-to-date symlink: /home/shihab/MARS PROJECT/mars_ws/install/mars_world/share/mars_world/environment/ament_prefix_path.sh
+[0.443s] -- Up-to-date symlink: /home/shihab/MARS PROJECT/mars_ws/install/mars_world/share/mars_world/environment/ament_prefix_path.dsv
+[0.443s] -- Up-to-date symlink: /home/shihab/MARS PROJECT/mars_ws/install/mars_world/share/mars_world/environment/path.sh
+[0.443s] -- Up-to-date symlink: /home/shihab/MARS PROJECT/mars_ws/install/mars_world/share/mars_world/environment/path.dsv
+[0.444s] -- Up-to-date symlink: /home/shihab/MARS PROJECT/mars_ws/install/mars_world/share/mars_world/local_setup.bash
+[0.444s] -- Up-to-date symlink: /home/shihab/MARS PROJECT/mars_ws/install/mars_world/share/mars_world/local_setup.sh
+[0.444s] -- Up-to-date symlink: /home/shihab/MARS PROJECT/mars_ws/install/mars_world/share/mars_world/local_setup.zsh
+[0.444s] -- Up-to-date symlink: /home/shihab/MARS PROJECT/mars_ws/install/mars_world/share/mars_world/local_setup.dsv
+[0.444s] -- Symlinking: /home/shihab/MARS PROJECT/mars_ws/install/mars_world/share/mars_world/package.dsv
+[0.450s] -- Up-to-date symlink: /home/shihab/MARS PROJECT/mars_ws/install/mars_world/share/ament_index/resource_index/packages/mars_world
+[0.450s] -- Up-to-date symlink: /home/shihab/MARS PROJECT/mars_ws/install/mars_world/share/mars_world/cmake/mars_worldConfig.cmake
+[0.450s] -- Up-to-date symlink: /home/shihab/MARS PROJECT/mars_ws/install/mars_world/share/mars_world/cmake/mars_worldConfig-version.cmake
+[0.451s] -- Up-to-date symlink: /home/shihab/MARS PROJECT/mars_ws/install/mars_world/share/mars_world/package.xml
+[0.469s] Invoked command in '/home/shihab/MARS PROJECT/mars_ws/build/mars_world' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/shihab/MARS PROJECT/mars_ws/build/mars_world

@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<sdf version="1.6">
+  <model name="house1">
+    <static>true</static>
+    <link name="house_link">
+      <collision name="house_collision">
+        <pose>0 0 0.75 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>2.8 2.8 1.5</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <visual name="house_visual">
+        <pose>0 0 0.75 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>2.8 2.8 1.5</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.80 0.25 0.25 1</ambient>
+          <diffuse>0.80 0.25 0.25 1</diffuse>
+          <specular>0.07 0.07 0.07 1</specular>
+        </material>
+      </visual>
+
+      <visual name="roof_visual">
+        <pose>0 0 1.55 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>3.0 3.0 0.20</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.92 0.92 0.92 1</ambient>
+          <diffuse>0.98 0.98 0.98 1</diffuse>
+          <specular>0.04 0.04 0.04 1</specular>
+        </material>
+      </visual>
+    </link>
+  </model>
+</sdf>
