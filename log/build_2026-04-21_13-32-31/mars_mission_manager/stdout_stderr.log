@@ -1,0 +1,17 @@
+running develop
+running egg_info
+writing mars_mission_manager.egg-info/PKG-INFO
+writing dependency_links to mars_mission_manager.egg-info/dependency_links.txt
+writing entry points to mars_mission_manager.egg-info/entry_points.txt
+writing requirements to mars_mission_manager.egg-info/requires.txt
+writing top-level names to mars_mission_manager.egg-info/top_level.txt
+reading manifest file 'mars_mission_manager.egg-info/SOURCES.txt'
+writing manifest file 'mars_mission_manager.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/shihab/MARS PROJECT/mars_ws/install/mars_mission_manager/lib/python3.10/site-packages/mars-mission-manager.egg-link (link to .)
+Installing mission_manager_node script to /home/shihab/MARS PROJECT/mars_ws/install/mars_mission_manager/lib/mars_mission_manager
+
+Installed /home/shihab/MARS PROJECT/mars_ws/build/mars_mission_manager
+running symlink_data
+symbolically linking /home/shihab/MARS PROJECT/mars_ws/build/mars_mission_manager/resource/mars_mission_manager -> /home/shihab/MARS PROJECT/mars_ws/install/mars_mission_manager/share/ament_index/resource_index/packages
+symbolically linking /home/shihab/MARS PROJECT/mars_ws/build/mars_mission_manager/package.xml -> /home/shihab/MARS PROJECT/mars_ws/install/mars_mission_manager/share/mars_mission_manager

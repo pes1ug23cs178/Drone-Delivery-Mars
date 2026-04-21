@@ -4,14 +4,22 @@ import os
 
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
-from launch.actions import IncludeLaunchDescription, SetEnvironmentVariable, TimerAction
+from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription, SetEnvironmentVariable, TimerAction
+from launch.conditions import IfCondition
 from launch.launch_description_sources import PythonLaunchDescriptionSource
-from launch.substitutions import EnvironmentVariable
+from launch.substitutions import EnvironmentVariable, LaunchConfiguration
 from launch_ros.actions import Node
 import xacro
 
 
 def generate_launch_description() -> LaunchDescription:
+    use_graph_planner = LaunchConfiguration('use_graph_planner')
+    declare_use_graph_planner = DeclareLaunchArgument(
+        'use_graph_planner',
+        default_value='false',
+        description='Enable graph-based planner and optional mission manager path following.',
+    )
+
     gazebo_ros_share = get_package_share_directory('gazebo_ros')
     mars_world_share = get_package_share_directory('mars_world')
     mars_drone_share = get_package_share_directory('mars_drone_description')
@@ -67,7 +75,16 @@ def generate_launch_description() -> LaunchDescription:
         executable='mission_manager_node',
         name='mission_manager_node',
         output='screen',
+        parameters=[{'use_sim_time': True, 'use_graph_planner': use_graph_planner}],
+    )
+
+    graph_path_planner = Node(
+        package='mars_graph_planner',
+        executable='graph_path_planner',
+        name='graph_path_planner',
+        output='screen',
         parameters=[{'use_sim_time': True}],
+        condition=IfCondition(use_graph_planner),
     )
 
     rviz = Node(
@@ -80,15 +97,18 @@ def generate_launch_description() -> LaunchDescription:
     )
 
     delayed_spawn = TimerAction(period=4.0, actions=[spawn_drone])
+    delayed_graph_planner = TimerAction(period=5.5, actions=[graph_path_planner])
     delayed_mission_manager = TimerAction(period=6.0, actions=[mission_manager])
     delayed_rviz = TimerAction(period=7.0, actions=[rviz])
 
     return LaunchDescription(
         [
+            declare_use_graph_planner,
             set_gazebo_model_path,
             gazebo,
             robot_state_publisher,
             delayed_spawn,
+            delayed_graph_planner,
             delayed_mission_manager,
             delayed_rviz,
         ]

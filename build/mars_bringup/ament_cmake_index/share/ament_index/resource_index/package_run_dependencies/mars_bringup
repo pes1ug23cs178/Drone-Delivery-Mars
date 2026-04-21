@@ -1,1 +1,1 @@
-launch;launch_ros;gazebo_ros;robot_state_publisher;rviz2;xacro;mars_world;mars_drone_description;mars_mission_manager
+launch;launch_ros;gazebo_ros;robot_state_publisher;rviz2;xacro;mars_world;mars_drone_description;mars_mission_manager;mars_graph_planner

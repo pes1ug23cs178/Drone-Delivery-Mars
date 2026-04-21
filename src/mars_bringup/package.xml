@@ -19,6 +19,7 @@
   <exec_depend>mars_world</exec_depend>
   <exec_depend>mars_drone_description</exec_depend>
   <exec_depend>mars_mission_manager</exec_depend>
+  <exec_depend>mars_graph_planner</exec_depend>
 
   <export>
     <build_type>ament_cmake</build_type>

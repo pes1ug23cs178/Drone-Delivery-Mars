@@ -1,0 +1,3 @@
+[console_scripts]
+graph_path_planner = mars_graph_planner.graph_path_planner_node:main
+

@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 
 from enum import Enum
-from typing import Dict, Optional, Tuple
+import math
+from typing import Dict, List, Optional, Tuple
 
 import rclpy
 from geometry_msgs.msg import PoseStamped, TransformStamped, Twist
@@ -25,6 +26,13 @@ class MissionState(str, Enum):
 class MissionManagerNode(Node):
     def __init__(self) -> None:
         super().__init__('mission_manager_node')
+
+        self.use_graph_planner = bool(self.declare_parameter('use_graph_planner', False).value)
+        self.graph_planner_timeout_sec = float(self.declare_parameter('graph_planner_timeout_sec', 2.0).value)
+        self.graph_waypoint_tolerance = float(self.declare_parameter('graph_waypoint_tolerance', 0.4).value)
+        self.graph_goal_topic = str(self.declare_parameter('graph_goal_topic', '/mars/goal_pose').value)
+        self.planned_path_topic = str(self.declare_parameter('planned_path_topic', '/mars/planned_path').value)
+        self.cmd_vel_body_frame = bool(self.declare_parameter('cmd_vel_body_frame', True).value)
 
         self.kp = 0.5
         self.max_velocity = 2.0
@@ -55,6 +63,11 @@ class MissionManagerNode(Node):
         self.active_house: Optional[str] = None
         self.queued_house: Optional[str] = None
         self.delivery_start_time = None
+        self.graph_waypoints: List[Tuple[float, float, float]] = []
+        self.graph_waypoint_index = 0
+        self.graph_waiting_for_plan = False
+        self.graph_plan_requested_at = None
+        self.graph_requested_house: Optional[str] = None
 
         self.drone_entity_name = 'mars_drone'
         self.pending_set_state_future = None
@@ -62,11 +75,18 @@ class MissionManagerNode(Node):
         self.cmd_vel_pub = self.create_publisher(Twist, '/drone/cmd_vel', 20)
         self.state_pub = self.create_publisher(String, '/mars/mission_state', 10)
         self.path_pub = self.create_publisher(Path, '/drone/path', 10)
+        self.goal_pose_pub = self.create_publisher(PoseStamped, self.graph_goal_topic, 10)
 
         self.target_sub = self.create_subscription(
             String,
             '/mars/delivery_target',
             self.target_callback,
+            10,
+        )
+        self.planned_path_sub = self.create_subscription(
+            Path,
+            self.planned_path_topic,
+            self.planned_path_callback,
             10,
         )
         self.odom_sub = self.create_subscription(
@@ -90,6 +110,21 @@ class MissionManagerNode(Node):
 
         self.publish_mission_state()
         self.get_logger().info('Mission manager started. Waiting for delivery targets on /mars/delivery_target.')
+        self.get_logger().info(
+            'Guidance algorithm: straight-line proportional vector control (P-controller with XY vector speed limit).'
+        )
+        if self.cmd_vel_body_frame:
+            self.get_logger().info('Cmd frame: /drone/cmd_vel interpreted as body-frame (world velocity is rotated to body).')
+        else:
+            self.get_logger().info('Cmd frame: /drone/cmd_vel interpreted as world-frame (no velocity rotation applied).')
+        if self.use_graph_planner:
+            self.get_logger().info(
+                f'Graph planner integration enabled. Goal topic: {self.graph_goal_topic}, '
+                f'planned path topic: {self.planned_path_topic}'
+            )
+            self.get_logger().info(
+                'Path planning algorithm: 3D graph A* (Euclidean heuristic with distance+time weighted cost).'
+            )
 
     def clamp(self, value: float, limit: float) -> float:
         return max(min(value, limit), -limit)
@@ -108,6 +143,7 @@ class MissionManagerNode(Node):
     def start_mission(self, house_name: str) -> None:
         self.active_house = house_name
         self.delivery_start_time = None
+        self.clear_graph_plan()
         self.get_logger().info(f'Accepted mission to {house_name}.')
         self.set_state(MissionState.TAKEOFF)
 
@@ -126,6 +162,110 @@ class MissionManagerNode(Node):
             return
 
         self.start_mission(house_name)
+
+    def clear_graph_plan(self) -> None:
+        self.graph_waypoints = []
+        self.graph_waypoint_index = 0
+        self.graph_waiting_for_plan = False
+        self.graph_plan_requested_at = None
+        self.graph_requested_house = None
+
+    def request_graph_plan_for_active_house(self) -> None:
+        if not self.use_graph_planner or self.active_house is None:
+            return
+
+        house_x, house_y = self.house_positions[self.active_house]
+
+        goal_msg = PoseStamped()
+        goal_msg.header.stamp = self.get_clock().now().to_msg()
+        goal_msg.header.frame_id = 'world'
+        goal_msg.pose.position.x = float(house_x)
+        goal_msg.pose.position.y = float(house_y)
+        goal_msg.pose.position.z = float(self.target_altitude)
+        goal_msg.pose.orientation.w = 1.0
+
+        self.goal_pose_pub.publish(goal_msg)
+        self.graph_waiting_for_plan = True
+        self.graph_plan_requested_at = self.get_clock().now()
+        self.graph_requested_house = self.active_house
+        self.get_logger().info(f'Requested graph plan for {self.active_house}.')
+
+    def arrived_waypoint(self, target_x: float, target_y: float, target_z: float) -> bool:
+        xy_error = self.distance_xy(target_x, target_y)
+        z_error = abs(target_z - self.current_z)
+        return xy_error <= self.graph_waypoint_tolerance and z_error <= 0.45
+
+    def planned_path_callback(self, msg: Path) -> None:
+        if not self.use_graph_planner:
+            return
+        if self.active_house is None:
+            return
+        if not self.graph_waiting_for_plan:
+            return
+        if self.graph_requested_house != self.active_house:
+            return
+        if not msg.poses:
+            self.get_logger().warn('Received empty graph path; keeping fallback behavior enabled.')
+            return
+
+        house_x, house_y = self.house_positions[self.active_house]
+        end_pose = msg.poses[-1].pose.position
+        goal_error_xy = ((end_pose.x - house_x) ** 2 + (end_pose.y - house_y) ** 2) ** 0.5
+        if goal_error_xy > 1.5:
+            self.get_logger().warn(
+                f'Ignoring planned path with mismatched goal (xy error {goal_error_xy:.2f}m).'
+            )
+            return
+
+        waypoints: List[Tuple[float, float, float]] = []
+        for pose in msg.poses:
+            waypoint = (
+                pose.pose.position.x,
+                pose.pose.position.y,
+                pose.pose.position.z,
+            )
+
+            if waypoints:
+                prev = waypoints[-1]
+                step = (
+                    (waypoint[0] - prev[0]) ** 2
+                    + (waypoint[1] - prev[1]) ** 2
+                    + (waypoint[2] - prev[2]) ** 2
+                ) ** 0.5
+                if step < 0.05:
+                    continue
+
+            waypoints.append(waypoint)
+
+        if not waypoints:
+            self.get_logger().warn('Received graph path had no usable waypoints.')
+            return
+
+        end_waypoint = waypoints[-1]
+        end_error = (
+            (end_waypoint[0] - house_x) ** 2
+            + (end_waypoint[1] - house_y) ** 2
+            + (end_waypoint[2] - self.target_altitude) ** 2
+        ) ** 0.5
+        if end_error > 0.25:
+            waypoints.append((house_x, house_y, self.target_altitude))
+
+        while waypoints and self.arrived_waypoint(*waypoints[0]):
+            waypoints.pop(0)
+
+        if not waypoints:
+            self.get_logger().info('Received graph path but already near destination waypoint.')
+            self.graph_waiting_for_plan = False
+            self.graph_plan_requested_at = None
+            return
+
+        self.graph_waypoints = waypoints
+        self.graph_waypoint_index = 0
+        self.graph_waiting_for_plan = False
+        self.graph_plan_requested_at = None
+        self.get_logger().info(
+            f'Accepted graph path for {self.active_house} with {len(waypoints)} waypoints.'
+        )
 
     def odom_callback(self, msg: Odometry) -> None:
         self.current_x = msg.pose.pose.position.x
@@ -186,6 +326,12 @@ class MissionManagerNode(Node):
         z_error = abs(target_z - self.current_z)
         return xy_error <= self.arrival_threshold and z_error <= 0.35
 
+    def current_yaw(self) -> float:
+        qx, qy, qz, qw = self.current_orientation
+        sin_yaw = 2.0 * ((qw * qz) + (qx * qy))
+        cos_yaw = 1.0 - (2.0 * ((qy * qy) + (qz * qz)))
+        return math.atan2(sin_yaw, cos_yaw)
+
     def compute_cmd_to_target(
         self,
         target_x: float,
@@ -203,8 +349,26 @@ class MissionManagerNode(Node):
         error_y = target_y - self.current_y
         error_z = target_z - self.current_z
 
-        cmd.linear.x = self.clamp(self.kp * error_x, xy_limit)
-        cmd.linear.y = self.clamp(self.kp * error_y, xy_limit)
+        # Preserve XY direction by limiting vector magnitude instead of clamping each axis independently.
+        vel_world_x = self.kp * error_x
+        vel_world_y = self.kp * error_y
+        vel_world_norm = math.sqrt((vel_world_x * vel_world_x) + (vel_world_y * vel_world_y))
+
+        if vel_world_norm > xy_limit and vel_world_norm > 1e-6:
+            scale = xy_limit / vel_world_norm
+            vel_world_x *= scale
+            vel_world_y *= scale
+
+        if self.cmd_vel_body_frame:
+            yaw = self.current_yaw()
+            cos_yaw = math.cos(yaw)
+            sin_yaw = math.sin(yaw)
+            cmd.linear.x = (cos_yaw * vel_world_x) + (sin_yaw * vel_world_y)
+            cmd.linear.y = (-sin_yaw * vel_world_x) + (cos_yaw * vel_world_y)
+        else:
+            cmd.linear.x = vel_world_x
+            cmd.linear.y = vel_world_y
+
         cmd.linear.z = self.clamp(self.kp * error_z, z_limit)
 
         return cmd
@@ -280,23 +444,67 @@ class MissionManagerNode(Node):
                 max_z=0.8,
             )
             if self.arrived_3d(warehouse_x, warehouse_y, self.target_altitude):
+                if self.use_graph_planner and self.active_house is not None:
+                    self.request_graph_plan_for_active_house()
                 self.set_state(MissionState.FLY_TO_HOUSE)
 
         elif self.state == MissionState.FLY_TO_HOUSE:
             if self.active_house is None:
+                self.clear_graph_plan()
                 self.set_state(MissionState.IDLE)
             else:
                 house_x, house_y = self.house_positions[self.active_house]
-                cmd = self.compute_cmd_to_target(
-                    house_x,
-                    house_y,
-                    self.target_altitude,
-                    max_xy=self.max_velocity,
-                    max_z=0.8,
-                )
-                if self.arrived_3d(house_x, house_y, self.target_altitude):
-                    self.delivery_start_time = now
-                    self.set_state(MissionState.DELIVER)
+
+                if (
+                    self.use_graph_planner
+                    and self.graph_waypoint_index < len(self.graph_waypoints)
+                ):
+                    waypoint = self.graph_waypoints[self.graph_waypoint_index]
+                    cmd = self.compute_cmd_to_target(
+                        waypoint[0],
+                        waypoint[1],
+                        waypoint[2],
+                        max_xy=self.max_velocity,
+                        max_z=0.8,
+                    )
+                    if self.arrived_waypoint(*waypoint):
+                        self.graph_waypoint_index += 1
+                        if self.graph_waypoint_index >= len(self.graph_waypoints):
+                            self.clear_graph_plan()
+                            self.delivery_start_time = now
+                            self.set_state(MissionState.DELIVER)
+                else:
+                    if self.use_graph_planner and self.graph_waiting_for_plan:
+                        waited = 0.0
+                        if self.graph_plan_requested_at is not None:
+                            waited = (now - self.graph_plan_requested_at).nanoseconds / 1e9
+
+                        if waited > self.graph_planner_timeout_sec:
+                            self.graph_waiting_for_plan = False
+                            self.graph_plan_requested_at = None
+                            self.get_logger().warn(
+                                'Graph planner timeout reached. Falling back to direct target navigation.'
+                            )
+                        else:
+                            cmd = self.compute_cmd_to_target(
+                                self.current_x,
+                                self.current_y,
+                                self.target_altitude,
+                                max_xy=0.3,
+                                max_z=0.8,
+                            )
+
+                    if not self.use_graph_planner or not self.graph_waiting_for_plan:
+                        cmd = self.compute_cmd_to_target(
+                            house_x,
+                            house_y,
+                            self.target_altitude,
+                            max_xy=self.max_velocity,
+                            max_z=0.8,
+                        )
+                        if self.arrived_3d(house_x, house_y, self.target_altitude):
+                            self.delivery_start_time = now
+                            self.set_state(MissionState.DELIVER)
 
         elif self.state == MissionState.DELIVER:
             if self.active_house is None:
@@ -346,6 +554,7 @@ class MissionManagerNode(Node):
                 completed_house = self.active_house
                 self.active_house = None
                 self.delivery_start_time = None
+                self.clear_graph_plan()
                 self.set_state(MissionState.IDLE)
                 if completed_house is not None:
                     self.get_logger().info(f'Mission complete. Returned to warehouse from {completed_house}.')
