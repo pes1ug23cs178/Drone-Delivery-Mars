@@ -1,5 +1,4 @@
 /home/shihab/MARS PROJECT/mars_ws/install/mars_drone_description/share/mars_drone_description/urdf/drone.urdf.xacro
-/home/shihab/MARS PROJECT/mars_ws/install/mars_drone_description/share/mars_drone_description/launch/__pycache__/display.launch.cpython-310.pyc
 /home/shihab/MARS PROJECT/mars_ws/install/mars_drone_description/share/mars_drone_description/launch/display.launch.py
 /home/shihab/MARS PROJECT/mars_ws/install/mars_drone_description/share/ament_index/resource_index/package_run_dependencies/mars_drone_description
 /home/shihab/MARS PROJECT/mars_ws/install/mars_drone_description/share/ament_index/resource_index/parent_prefix_path/mars_drone_description

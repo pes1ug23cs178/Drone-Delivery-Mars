@@ -1,4 +1,3 @@
-/home/shihab/MARS PROJECT/mars_ws/install/mars_bringup/share/mars_bringup/launch/__pycache__/mars_full.launch.cpython-310.pyc
 /home/shihab/MARS PROJECT/mars_ws/install/mars_bringup/share/mars_bringup/launch/mars_full.launch.py
 /home/shihab/MARS PROJECT/mars_ws/install/mars_bringup/share/mars_bringup/rviz/mars_drone.rviz
 /home/shihab/MARS PROJECT/mars_ws/install/mars_bringup/share/ament_index/resource_index/package_run_dependencies/mars_bringup

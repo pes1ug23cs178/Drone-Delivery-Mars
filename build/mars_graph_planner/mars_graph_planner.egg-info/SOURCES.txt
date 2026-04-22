@@ -12,4 +12,11 @@ mars_graph_planner/__init__.py
 mars_graph_planner/graph_path_planner_node.py
 mars_graph_planner/performance_tracker.py
 mars_graph_planner/planner_core.py
+mars_graph_planner.egg-info/PKG-INFO
+mars_graph_planner.egg-info/SOURCES.txt
+mars_graph_planner.egg-info/dependency_links.txt
+mars_graph_planner.egg-info/entry_points.txt
+mars_graph_planner.egg-info/requires.txt
+mars_graph_planner.egg-info/top_level.txt
+mars_graph_planner.egg-info/zip-safe
 resource/mars_graph_planner

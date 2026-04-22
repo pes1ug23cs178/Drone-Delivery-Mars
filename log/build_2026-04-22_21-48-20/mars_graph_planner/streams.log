@@ -1,0 +1,17 @@
+[0.982s] Invoking command in '/home/shihab/MARS PROJECT/mars_ws/build/mars_graph_planner': PYTHONPATH=/home/shihab/MARS PROJECT/mars_ws/build/mars_graph_planner/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/shihab/MARS PROJECT/mars_ws/install/mars_graph_planner/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/shihab/MARS PROJECT/mars_ws/build/mars_graph_planner/build --no-deps symlink_data
+[1.196s] running develop
+[1.343s] running egg_info
+[1.343s] writing mars_graph_planner.egg-info/PKG-INFO
+[1.343s] writing dependency_links to mars_graph_planner.egg-info/dependency_links.txt
+[1.343s] writing entry points to mars_graph_planner.egg-info/entry_points.txt
+[1.343s] writing requirements to mars_graph_planner.egg-info/requires.txt
+[1.343s] writing top-level names to mars_graph_planner.egg-info/top_level.txt
+[1.344s] reading manifest file 'mars_graph_planner.egg-info/SOURCES.txt'
+[1.345s] writing manifest file 'mars_graph_planner.egg-info/SOURCES.txt'
+[1.346s] running build_ext
+[1.346s] Creating /home/shihab/MARS PROJECT/mars_ws/install/mars_graph_planner/lib/python3.10/site-packages/mars-graph-planner.egg-link (link to .)
+[1.347s] Installing graph_path_planner script to /home/shihab/MARS PROJECT/mars_ws/install/mars_graph_planner/lib/mars_graph_planner
+[1.347s] 
+[1.347s] Installed /home/shihab/MARS PROJECT/mars_ws/build/mars_graph_planner
+[1.347s] running symlink_data
+[1.377s] Invoked command in '/home/shihab/MARS PROJECT/mars_ws/build/mars_graph_planner' returned '0': PYTHONPATH=/home/shihab/MARS PROJECT/mars_ws/build/mars_graph_planner/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/shihab/MARS PROJECT/mars_ws/install/mars_graph_planner/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/shihab/MARS PROJECT/mars_ws/build/mars_graph_planner/build --no-deps symlink_data

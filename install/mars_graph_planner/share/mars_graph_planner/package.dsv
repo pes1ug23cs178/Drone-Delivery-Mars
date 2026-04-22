@@ -4,3 +4,6 @@ source;share/mars_graph_planner/hook/pythonpath.sh
 source;share/mars_graph_planner/hook/ament_prefix_path.ps1
 source;share/mars_graph_planner/hook/ament_prefix_path.dsv
 source;share/mars_graph_planner/hook/ament_prefix_path.sh
+source;../../build/mars_graph_planner/share/mars_graph_planner/hook/pythonpath_develop.ps1
+source;../../build/mars_graph_planner/share/mars_graph_planner/hook/pythonpath_develop.dsv
+source;../../build/mars_graph_planner/share/mars_graph_planner/hook/pythonpath_develop.sh

@@ -1,0 +1,17 @@
+[1.055s] Invoking command in '/home/shihab/MARS PROJECT/mars_ws/build/mars_mission_manager': PYTHONPATH=/home/shihab/MARS PROJECT/mars_ws/build/mars_mission_manager/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/shihab/MARS PROJECT/mars_ws/install/mars_mission_manager/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/shihab/MARS PROJECT/mars_ws/build/mars_mission_manager/build --no-deps symlink_data
+[1.271s] running develop
+[1.411s] running egg_info
+[1.412s] writing mars_mission_manager.egg-info/PKG-INFO
+[1.412s] writing dependency_links to mars_mission_manager.egg-info/dependency_links.txt
+[1.412s] writing entry points to mars_mission_manager.egg-info/entry_points.txt
+[1.412s] writing requirements to mars_mission_manager.egg-info/requires.txt
+[1.412s] writing top-level names to mars_mission_manager.egg-info/top_level.txt
+[1.415s] reading manifest file 'mars_mission_manager.egg-info/SOURCES.txt'
+[1.415s] writing manifest file 'mars_mission_manager.egg-info/SOURCES.txt'
+[1.417s] running build_ext
+[1.419s] Creating /home/shihab/MARS PROJECT/mars_ws/install/mars_mission_manager/lib/python3.10/site-packages/mars-mission-manager.egg-link (link to .)
+[1.419s] Installing mission_manager_node script to /home/shihab/MARS PROJECT/mars_ws/install/mars_mission_manager/lib/mars_mission_manager
+[1.419s] 
+[1.419s] Installed /home/shihab/MARS PROJECT/mars_ws/build/mars_mission_manager
+[1.419s] running symlink_data
+[1.466s] Invoked command in '/home/shihab/MARS PROJECT/mars_ws/build/mars_mission_manager' returned '0': PYTHONPATH=/home/shihab/MARS PROJECT/mars_ws/build/mars_mission_manager/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/shihab/MARS PROJECT/mars_ws/install/mars_mission_manager/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/shihab/MARS PROJECT/mars_ws/build/mars_mission_manager/build --no-deps symlink_data
